@@ -1,19 +1,15 @@
 var xDown = false;
 $(document).ready(function() {
   playMusic('#points');
-  $('.ryu, .hulk-ryu').mouseenter(function(){
+  $('.ryu').mouseenter(function(){
     $('.ryu-hide').hide();
     $('.ryu-ready, .hulk-ryu-ready').show();
-  })
-  .mouseleave(function(){
-    $('.ryu-hide').hide();
-    $('.ryu-still, .hulk-ryu-still').show();
   })
   .mousedown(function(){
     playMusic('#hadouken-sound');
     $('.ryu-hide').hide();
-    $('.ryu-throwing, .hulk-ryu-throwing').show();
-    $('.hadouken, .hulk-hadouken').finish().show().animate(
+    $('.ryu-throwing, .hulk-ryu-ready').show();
+    $('.hadouken').finish().show().animate(
       {'left': '1025px'},
       500,
       function() {
@@ -21,13 +17,9 @@ $(document).ready(function() {
         $(this).css('left', '525px');
       }
     );
-  })
-  .mouseup(function(){
-    $('.ryu-hide').hide();
-    $('.ryu-ready, .hulk-ryu-ready').show();
   });
-})
-.keydown(function(event) {
+}).keydown(function(event) {
+  console.log("hi");
     if (xDown)
       return;
     if (event.which == 88){
@@ -37,11 +29,32 @@ $(document).ready(function() {
       $('.ryu-hide').hide();
       $('.ryu-cool, .hulk-ryu-cool').show();
   }
-})
-.keyup(function() {
+}).keyup(function() {
   xDown = false;
   stopMusic('#numb');
-  stopMusic('#points');
+  $('.ryu-hide').hide();
+  $('.ryu-ready, .hulk-ryu-ready').show();
+});
+$('.hulk-ryu').mouseenter(function(){
+  $('.ryu-hide').hide();
+  $('.ryu-ready, .hulk-ryu-ready').show();
+}).mousedown(function(){
+  playMusic('#hadouken-sound');
+  $('.ryu-hide').hide();
+  $('.ryu-ready, .hulk-ryu-throwing').show();
+  $('.hulk-hadouken').finish().show().animate(
+    {'left': '1025px'},
+    500,
+    function() {
+      $(this).hide();
+      $(this).css('left', '525px');
+    }
+  );
+});
+$('.ryu, .hulk-ryu').mouseup(function(){
+  $('.ryu-hide').hide();
+  $('.ryu-ready, .hulk-ryu-ready').show();
+}).mouseleave(function(){
   $('.ryu-hide').hide();
   $('.ryu-still, .hulk-ryu-still').show();
 });
