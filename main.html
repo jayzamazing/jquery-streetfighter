@@ -5,9 +5,13 @@
 	<title>Streetfighter</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/main.css">
+	<link href='https://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<section>
+		<div class="introduction">
+			<div class="streetfighter"></div>
+		</div>
 		<div class="main">
 			<div class="ryu">
 				<div class="ryu-still ryu-hide"></div>
@@ -16,18 +20,29 @@
 				<div class="ryu-cool ryu-hide"></div>
 				<div class="hadouken"></div>
 			</div>
-			<div class="instructions"></div>
 			<div class="hulk-ryu">
 				<div class="hulk-ryu-still ryu-hide"></div>
 				<div class="hulk-ryu-ready ryu-hide"></div>
-				<div class="hulk-ryu-throwing"></div>
-				<div class="hulk-ryu-cool"></div>
+				<div class="hulk-ryu-throwing ryu-hide"></div>
+				<div class="hulk-ryu-cool ryu-hide"></div>
 				<div class="hulk-hadouken"></div>
+			</div>
+			<div class="content">
+				<div class="name anim">
+					<h3>Welcome to Street Fighter!</h3>
+				</div>
+				<div class="bywhom anim2">
+					<p>Brought to you by Adrian J Lopez!</p>
+				</div>
+				<div class="intructions">
+					<p>Click on either Ryu or Hulk Ryu to throw a Hadouken.</p>
+					<p>Press and hold down the x key for their cool pose!</p>
+				</div>
 			</div>
 		</div>
 		<audio id="hadouken-sound" src="sound/hadouken.mp3"></audio>
 		<audio id="numb" src="sound/LinkinPark-Numb.mp3"></audio>
-
+		<audio id="points" src="sound/pointsofauthority.mp3"></audio>
 	</section>
 	<script src="http://code.jquery.com/jquery.min.js"></script>
 	<script src="js/app.js"></script>

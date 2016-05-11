@@ -1,23 +1,32 @@
 body {
-  /*background-color: black;*/
+  background-color: black;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Russo One', sans-serif;
+}
+section {
+  width: 80%;
+  margin: 0 auto;
 }
 .main {
   background-color: white;
-  margin-top: 110px;
-  padding: 0 100px;
-  min-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  min-width: 1400px;
   height: 500px;
   position: relative;
   z-index: 1;
-  display: inline-block;
+  display:inline-block;
+  text-align: center;
 }
 .ryu, .hulk-ryu {
   width:659px;
   height: 494px;
+  display:inline-block;
 }
-.ryu {
-}
-.hulk-ryu {
+div[class="hulk-ryu"] {
   -ms-filter: hue-rotate(90deg);
   -webkit-filter: hue-rotate(90deg);
   filter: hue-rotate(90deg);
@@ -34,35 +43,84 @@ body {
 .hulk-ryu-ready, .hulk-ryu-throwing, .hulk-ryu-cool {
   display: none;
 }
-.ryu-ready {
+.ryu-ready, .hulk-ryu-ready {
   background-image: url('../images/ryu-ready-position.gif');
 }
-.ryu-still {
+.ryu-still, .hulk-ryu-still {
   background-image: url('../images/ryu-standing-still.png');
 }
-.hulk-ryu-still {
-  background-image: url('../images/ryu-standing-still.png');
-}
-.ryu-throwing {
+.ryu-throwing, .hulk-ryu-throwing {
   background-image: url('../images/ryu-throwing-hadouken.png');
 }
-.ryu-cool {
+.ryu-cool, .hulk-ryu-cool {
   background-image: url('../images/ryu-cool.gif');
 }
-.hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool {
+.hadouken, .ryu-ready, .ryu-still, .ryu-throwing, .ryu-cool,
+.hulk-ryu-ready, .hulk-ryu-still, .hulk-ryu-throwing, .hulk-ryu-cool,
+.splashscreen {
   background-repeat: no-repeat;
 }
-.hadouken {
+.hadouken, .hulk-hadouken {
   background-image: url('../images/hadouken.gif');
   width: 156px;
   height: 90px;
   display: none;
-  float: left;
   position: absolute;
   z-index: 10;
-  top: 169px;
+}
+.hadouken {
+  top: 168px;
   left: 525px;
 }
-* {
-  outline: red 1px solid;
+.hulk-hadouken {
+  top: 168px;
+  right: 57px;
+}
+.introduction {
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  min-width: 1400px;
+  height: 167px;
+  position: relative;
+  z-index: 1;
+  display:inline-block;
+  background-color: #5d091a;
+}
+.streetfighter {
+  width: 299px;
+  height: 167px;
+  text-align: center;
+  margin: 0 auto;
+}
+.streetfighter {
+  background-image: url(../images/streetfighter.jpeg);
+}
+.content{
+  top: 100px;
+  position: absolute;
+	left: 435px;
+	height: 200px;
+	width: 550px;
+}
+@-webkit-keyframes fade {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+@keyframes fade {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+.name, .bywhom {
+  -webkit-animation-name: fade;
+  animation-name: fade;
+}
+.anim {
+  -webkit-animation-duration: 5s;animation-duration: 5s;
+  -webkit-animation-fill-mode: both;animation-fill-mode: both;
+}
+.anim2 {
+  -webkit-animation-duration: 10s;animation-duration: 10s;
+  -webkit-animation-fill-mode: both;animation-fill-mode: both;
 }
