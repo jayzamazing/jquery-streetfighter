@@ -26,7 +26,7 @@ section {
   height: 494px;
   display:inline-block;
 }
-div[class="hulk-ryu"] {
+.hulk-ryu {
   -ms-filter: hue-rotate(90deg);
   -webkit-filter: hue-rotate(90deg);
   filter: hue-rotate(90deg);
@@ -68,13 +68,9 @@ div[class="hulk-ryu"] {
   position: absolute;
   z-index: 10;
 }
-.hadouken {
+.hadouken, .hulk-hadouken {
   top: 168px;
   left: 525px;
-}
-.hulk-hadouken {
-  top: 168px;
-  right: 57px;
 }
 .introduction {
   background-color: white;
